@@ -1,0 +1,20 @@
+$(document).ready(function(){
+  $(".itemmerch_1").click(function(){
+     $(".white_plashka").addClass('moveplashka');
+  });
+  $(".itemmerch_2").click(function(){
+     $(".white_plashka_1").addClass('moveplashka');
+  });
+  $(".itemmerch_3").click(function(){
+     $(".white_plashka_2").addClass('moveplashka');
+  });
+  $(".itemmerch_4").click(function(){
+     $(".white_plashka_3").addClass('moveplashka');
+  });
+  $(".itemmerch_5").click(function(){
+     $(".white_plashka_4").addClass('moveplashka');
+  });
+  $(".itemmerch_6").click(function(){
+     $(".white_plashka_5").addClass('moveplashka');
+  });
+});
