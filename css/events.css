@@ -1,0 +1,175 @@
+section {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: 0.15s;
+  z-index: 100000;
+}
+h1{
+  font-size: 12.500vw;
+  position: absolute;
+  color: #D1D0D6;
+  font-family: Forma r;
+  letter-spacing: 0.02em;
+}
+body, html {
+  background: black;
+  overflow-y: hidden;
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  margin: 0;
+  position: relative;
+}
+h3{
+ font-family: Forma r;
+ font-weight: 400;
+ font-size: 1.389vw;
+ text-align: center;
+ letter-spacing: 0.02em;
+ line-height: 1.389vw;
+ color: white;
+ flex: none;
+}
+.logo_grey{
+  fill: white;
+  width: 5.236vw;
+  height: 4.236vw;
+  left: 2.847vw;
+}
+.game_1, .game_2{
+  width: 5.056vw;
+}
+.kuda{
+  color: #B2BCC8;
+  z-index: -100;
+  left: calc(50% - 49vw/2 - 24vw);
+  bottom: 0vw;
+  position: fixed;
+  line-height: 0.5vw;
+}
+
+/* * {
+  cursor: none;
+} */
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1vw 1.5vw;
+  width: 97vw;
+  height: 5vw;
+  position: fixed;
+  gap: 4vw;
+
+}
+.menu_bt{
+  display: none;
+}
+.breadcrumbs{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ width: 33.889vw;
+ height: 3.611vw;
+ gap: 0vw;
+}
+.breadcrumbs_book,.breadcrumbs_merch, .breadcrumbs_place, .breadcrumbs_events{
+ align-items: center;
+ padding: 0vw 2.014vw;
+ left: 33.056vw;
+ top: 1.736vw;
+ background: white;
+ border-radius: 3.403vw;
+ opacity: 20%;
+ backdrop-filter: blur(10vw);
+}
+.breadcrumbs_events{
+   opacity: 100%;
+}
+.breadcrumbs_events h3{
+  color: black;
+}
+.label_1, .label_2, .label_3, .label_4, .label_5, .label_6{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0vw 2vw;
+  gap: 0.7vw;
+  position: absolute;
+  width: 14.444vw;
+  height: 3.611vw;
+  background: rgba(178, 188, 200, 0.2);
+  backdrop-filter: blur(10vw);
+  border-radius: 3.403vw;
+}
+.label_1{
+  left: 4.236vw;
+  top: 19.861vw;
+  transform: rotate(-5.99deg);
+}
+.label_2{
+  left: 34.444vw;
+  top: 14.583vw;
+  transform: rotate(5.32deg);
+}
+.label_3{
+  left: 12.444vw;
+  top: 38.819vw;
+  transform: rotate(-22.32deg);
+}
+.label_4{
+  left: 18.444vw;
+  top: 10.819vw;
+  transform: rotate(-10.32deg);
+}
+.label_5{
+  width: 7vw;
+  left: 14.444vw;
+  top: 29.819vw;
+  transform: rotate(-5.32deg);
+}
+.label_6{
+  width: 7vw;
+  left: 21.444vw;
+  top: 12.819vw;
+  transform: rotate(-10.32deg);
+}
+.poster_1, .poster_2, .poster_3, .poster_4{
+  width: 22.091vw;
+  height: 31.262vw;
+}
+.poster_1{
+  position: absolute;
+  left: -1vw;
+  top:30vw;
+}
+.poster_2{
+  position: absolute;
+  left: 43vw;
+  top:20vw;
+}
+.poster_3{
+  position: absolute;
+  left: 16vw;
+  top:-2vw;
+}
+.poster_4{
+  position: absolute;
+  left: 72vw;
+  top:11vw;
+}
+.white_plashka,.white_plashka_1, .white_plashka_2,.white_plashka_4, .white_plashka_5,.white_plashka_3 {
+  position: fixed;
+  left: -36vw;
+  width: 35.208vw;
+  height: 100vh;
+  background-color: white;
+  border-radius: 0px 1.319vw 1.319vw 0px;
+  z-index: 300;
+}
+.moveplashka{
+  transform: translateX(36vw);
+  transition: transform 1s ease-in-out;
+}

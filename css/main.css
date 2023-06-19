@@ -1,0 +1,371 @@
+/* :root {
+  --orange: #F08603;
+  --blue: #12A4FF;
+  --black: #021F69 ;
+  --white:#FFFFFF;
+  --yellow:#FFF968;
+  --background: #EEFFFF;
+} */
+@font-face {
+  font-family: Forma m;
+  src: url(fonts/FormaDJRCyrillicDisplay-Medium-Testing.otf);
+}
+@font-face {
+  font-family: Forma r;
+  src: url(fonts/FormaDJRCyrillicBanner-Regular-Testing.otf);
+}
+.main {
+  display: block;
+}
+.merch,.posters, .book,.space {
+  transform: scale(1);
+  transition: transform 10s linear;
+  display: none;
+}
+
+section {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: 0.15s;
+  z-index: 100000;
+}
+h1{
+  font-size: 12.500vw;
+  position: absolute;
+  color: #D1D0D6;
+  font-family: Forma r;
+  letter-spacing: 0.02em;
+}
+.merch_1{
+  transition: transform 0.5s;
+}
+body, html {
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  margin: 0;
+  position: relative;
+}
+* {
+  cursor: none;
+}
+h3{
+  font-family: Forma r;
+  letter-spacing: 0.02em;
+  font-size: 2.083vw;
+  color: #D1D0D6;
+}
+
+/* СТИЛИЗАЦИЯ КУРСОРА */
+.cursor {
+  opacity: 0%;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: white;
+  mix-blend-mode: difference;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1000000;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: width 0.1s ease-out, height 0.1s ease-out, opacity 0.1s;
+}
+.cursor_label {
+  opacity: 0%;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  color: #D1D0D6;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 10000;
+  font-family: Forma r;
+  font-size: 30px;
+  letter-spacing: 1px;
+  text-align: center;
+  padding-top: 7px;
+  transform: translate(10px, 10px);
+  pointer-events: none;
+  transition: width 0.4s ease-out, opacity 0.1s;
+}
+.cursor_label::after {
+  content: "двигай";
+}
+.cursor_click {
+  width: 12px;
+  height: 12px;
+  transition: width 0.1s ease-out, height 0.1s ease-out;
+}
+.cursor_label_click {
+  width: 57px;
+  transition: width 0.4s ease-out;
+}
+.cursor_label_click::after {
+  content: "нажми";
+}
+.logo {
+  position: fixed;
+  top: 95%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  fill: white;
+  z-index: 9999;
+}
+.container {
+  position: absolute;
+  width: 0%;
+  height: 0%;
+  transition: 0.15s;
+  z-index: 100;
+}
+.canvas {
+  position: absolute;
+  left: 100%;
+  top: 100%;
+  transform: translate(-10%, -10%);
+  width: 50%;
+  height: 50%;
+  transition: transform 2s ease-out;
+  /* background: #111; */
+}
+.big_text_1{
+  font-size: 8vw;
+  z-index: 100;
+  top: 10vw;
+  line-height: 7vw;
+  width: 40vw;
+  left: 30vw;
+  text-align: center;
+}
+
+.mainimg{
+  position: absolute;
+  width: 200vw;
+  height:150vw;
+  top: 0vw;
+  left: 0vw;
+  animation: img_main 10s infinite alternate;
+  z-index: -100;
+}
+p{
+  font-family: Forma r;
+  letter-spacing: 0.02em;
+  font-size: 2.083vw;
+  color: #D1D0D6;
+}
+.hover_1, .hover_2, .hover_3, .hover_4{
+  position: absolute;
+  width: 62.969vw;
+  height: 62.969vw;
+  mix-blend-mode: luminosity;
+  z-index: 100000;
+}
+.hover_1{
+  top: 41.198vw;
+  left: -10vw;
+  background-image: url("../images/merch.svg");
+  background-size: cover;
+}
+.hover_2{
+  top: 40.198vw;
+  left: 70.646vw;
+  background-image: url("../images/posters.svg");
+  background-size: cover;
+}
+.hover_3{
+  top: -12.198vw;
+  left: 50.646vw;
+  background-image: url("../images/book.svg");
+  background-size: cover;
+}
+.hover_4{
+  top: -20.198vw;
+  left: -12.646vw;
+  background-image: url("../images/space.svg");
+  background-size: cover;
+}
+
+
+.blur{
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  opacity: 100%;
+  border-color: white;
+  backdrop-filter: blur(2vw);
+  z-index: 0;
+}
+.merch_text{
+  position: absolute;
+  text-align: center;
+  top: 15%;
+  left: 15%;
+}
+.item_merch_1,.item_merch_2, .item_merch_3, .item_merch_4{
+  mix-blend-mode: luminosity;
+  position: absolute;
+  z-index: 5;
+  background-size: cover;
+}
+.item_merch_1{
+ background-image: url("../images/item_1.png");
+ background-size: cover;
+ width: 66vw;
+ height:66.366vw;
+ top: 18vw;
+ left: -16vw;
+}
+.item_merch_2{
+ background-image: url("../images/item_2.png");
+ width: 66vw;
+ height:66.366vw;
+ top: -25vw;
+ left: 46vw;
+}
+.item_merch_3{
+ background-image: url("../images/item_3.png");
+ width: 66vw;
+ height:53.366vw;
+ top: 11vw;
+ left: 65vw;
+}
+.item_merch_4{
+ background-image: url("../images/item_4.png");
+ width: 66vw;
+ height:66.366vw;
+ top: -26vw;
+ left: -8vw;
+ transform: rotate(180deg);
+}
+.posters_text_1{
+  position: absolute;
+  text-align: center;
+  top: 40%;
+  left: 5%;
+}
+.posters_text_2{
+  position: absolute;
+  text-align: center;
+  top: 55%;
+  left: 15%;
+}
+.item_posters_1, .item_posters_2, .item_posters_3{
+  mix-blend-mode: luminosity;
+  position: absolute;
+  z-index: 5;
+  background-size: cover;
+}
+.item_posters_1{
+  background-image: url("../images/item_posters_1.png");
+  background-size: cover;
+  width: 44vw;
+  height:48vw;
+  top: -13vw;
+  left: -12vw;
+}
+.item_posters_2{
+  background-image: url("../images/item_posters_2.png");
+  background-size: cover;
+  width: 42vw;
+  height:47vw;
+  top: -8vw;
+  left: 22vw;
+}
+.item_posters_3{
+  background-image: url("../images/item_posters_3.png");
+  background-size: cover;
+  width: 48vw;
+  height:55.366vw;
+  top: -14vw;
+  left: 57vw;
+}
+.space_text_1{
+  position: absolute;
+  text-align: center;
+  top: -10vw;
+  left: 5%;
+}
+.space_text_2{
+  position: absolute;
+  text-align: center;
+  top: 0vw;
+  left: 15%;
+}
+.video{
+  background-image: url("../images/video.gif");
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  mix-blend-mode: luminosity;
+  position: absolute;
+  z-index: 0;
+}
+.book_text_1{
+  position: absolute;
+  text-align: center;
+  top: 40%;
+  left: 5%;
+}
+.book_text_2{
+  position: absolute;
+  text-align: center;
+  top: 55%;
+  left: 15%;
+}
+.item_book_1{
+  background-image: url("../images/book_1.png");
+  background-size: cover;
+  width: 60vw;
+  height:36vw;
+  top: -4vw;
+  left: -12vw;
+  position: absolute;
+}
+.item_book_2{
+  background-image: url("../images/book_2.png");
+  background-size: cover;
+  width: 60vw;
+  height:42vw;
+  top: -5vw;
+  left: 44vw;
+  position: absolute;
+}
+.hover_1_mobile,.hover_2_mobile,.hover_3_mobile,.hover_4_mobile{
+  position: absolute;
+  width: 92.969vw;
+  height: 92.969vw;
+  mix-blend-mode: luminosity;
+  z-index: 100000;
+  display: none;
+}
+.hover_1_mobile{
+  top: 44vw;
+  left: -28vw;
+  background-image: url("../images/merch.svg");
+  background-size: cover;
+}
+
+.hover_2_mobile{
+  top: 40.198vw;
+  left: 70.646vw;
+  background-image: url("../images/posters.svg");
+  background-size: cover;
+}
+.hover_3_mobile{
+  top: -12.198vw;
+  left: 50.646vw;
+  background-image: url("../images/book.svg");
+  background-size: cover;
+}
+.hover_4_mobile{
+  top: -20.198vw;
+  left: -12.646vw;
+  background-image: url("../images/space.svg");
+  background-size: cover;
+}
+/* Мерч */
